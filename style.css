@@ -1,0 +1,61 @@
+* {  
+  margin-top: 0;
+}
+
+/* dummy content to help us visualize the building project  */
+div {
+  border: 1px solid rgb(96, 156, 196);
+}
+
+#container {
+  display: grid;
+  grid-template: 1fr / 1fr 6fr;
+}
+
+#toolbar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+  background-color: lightblue;
+}
+
+#dashboard {
+  display: grid;
+  grid-template: 0.3fr 1fr 1fr / 3fr 1fr;
+
+  grid-column: 2 / 3;
+  grid-row: 1 / 1;
+  background-color: lightgray;
+}
+
+#header {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+#header-top {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#header-bottom {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#projects {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+#announcements {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3
+}
+
+#trending {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
