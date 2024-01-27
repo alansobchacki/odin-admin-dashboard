@@ -1,61 +1,251 @@
+/* dummy content to help us visualize the building project  */
+/*
+div {
+  border: 1px solid rgb(96, 156, 196);
+} */
+
 * {  
   margin-top: 0;
 }
 
-/* dummy content to help us visualize the building project  */
+body {
+  background-color: black;
+  font-family: 'Roboto';
+}
+
 div {
-  border: 1px solid rgb(96, 156, 196);
+  border-radius: 6px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  filter: invert(93%) sepia(2%) saturate(4319%) hue-rotate(192deg) brightness(120%) contrast(40%);
+  padding-left: 12px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color:rgb(179, 179, 179);
+}
+
+li {
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 
 #container {
   display: grid;
-  grid-template: 1fr / 1fr 6fr;
+  grid-template: 1fr / 1fr 5fr;
+  gap: 30px;
 }
 
 #toolbar {
+  display: grid;
+  grid-template: 0.2fr 0.5fr 0.4fr 1fr / 1fr;
+  align-items: end;
+  gap: 30px;
+
   grid-column: 1 / 2;
   grid-row: 1 / 1;
-  background-color: lightblue;
+  background-color:#191C24;
 }
 
 #dashboard {
   display: grid;
-  grid-template: 0.3fr 1fr 1fr / 3fr 1fr;
+  grid-template: 0.2fr 1fr 1fr / 3fr 1fr;
+  gap: 30px;
 
   grid-column: 2 / 3;
   grid-row: 1 / 1;
-  background-color: lightgray;
+  background-color:black;
 }
 
+/* the following settings are all about our header (search bar, create project button, profile bio) */
 #header {
   display: grid;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: 1fr / 0.5fr 0.5fr 0.3fr;
+  align-items: center;
 
+  gap: 25px;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  background-color:#191C24;
 }
 
-#header-top {
+#search-bar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  margin-left: 2%;
+  padding-left: 5%;
+  height: 50%;
+  border: 1px solid rgb(96, 156, 196);
+  border-radius: 6px;
+  background-color:#191C24;
+}
+
+#create-new-project {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  width: 90%;
+  height: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: rgb(69, 201, 109);
+  border-radius: 6px;
+}
+
+#profile {
+  display: grid;
+  grid-template: 1fr 0.7fr / 1fr 1fr 1fr;
+  gap: 10px;
+
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-column: 3 / 4;
+}
+
+#profile-name {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+
+  font-size: 1.3rem;
+  padding-top: 20px;
+  font-weight: light;
+  color: white;
+}
+
+#profile-avatar {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: lightblue;
+}
+
+#profile-email {
+  grid-column: 1 / 2;
+}
+
+#profile-email {
+  grid-column: 2 / 3;
+}
+
+#profile-hamburger {
+  grid-column: 3 / 4;
+}
+
+#profile-email, #profile-notifications, #profile-hamburger {
+  grid-row: 2 / 3;
+  filter: invert(93%) sepia(2%) saturate(4319%) hue-rotate(192deg) brightness(120%) contrast(80%);
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* the following settings are all about our project card section */
+#projects {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 1%;
+
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  background-color:#191C24;
+}
+
+.project-card {
+  display: grid;
+  grid-template:  0.2fr 1fr 0.2fr / 1fr;
+
+  background-color: #141313;
+  color: rgb(109, 109, 109);
+  height: 250px;
+  text-align: center;
+  border-left: 5px solid rgb(89, 151, 187);
+}
+
+.project-card h2 {
+  margin-top: 5%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
 
-#header-bottom {
+.project-card p {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 
-#projects {
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
-}
-
 #announcements {
   grid-column: 2 / 3;
-  grid-row: 2 / 3
+  grid-row: 2 / 3;
+  background-color:#191C24;
 }
 
 #trending {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
+  background-color:#191C24;
+}
+
+/* our icons go here */
+
+#icon-home {
+  background: url('icons/home-account.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-account {
+  background: url('icons/account.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-messages {
+  background: url('icons/message.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-history {
+  background: url('icons/history.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-tasks {
+  background: url('icons/format-list-checks.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-communities {
+  background: url('icons/account-group.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-settings {
+  background: url('icons/cogs.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-support {
+  background: url('icons/face-agent.svg') no-repeat left top;
+  padding-left: 48px;
+}
+
+#icon-privacy {
+  background: url('icons/account-eye.svg') no-repeat left top;
+  padding-left: 48px;
 }

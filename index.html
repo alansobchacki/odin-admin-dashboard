@@ -4,85 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <title>Admin Dashboard</title>
 </head>
 <body>
   <div id="container">
 
     <div id="toolbar">
-      Dashboard
+      <h1>Dashboard</h1>
 
       <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
+        <li id="icon-home">Home</li>
+        <li id="icon-account">Profile</li>
+        <li id="icon-messages">Messages</li>
+        <li id="icon-history">History</li>
+        <li id="icon-tasks">Tasks</li>
+        <li id="icon-communities">Communities</li>
       </ul>
 
       <ul>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
+        <li id="icon-settings">Settings</li>
+        <li id="icon-support">Support</li>
+        <li id="icon-privacy">Privacy</li>
       </ul>
     </div>
 
     <div id="dashboard">
 
       <div id="header">
-        <div id="header-top">
-          <input type="text" placeholder="Search..">
-
-          Notification icon
-
-          Profile icon
-
-          User name
-        </div>
-
-        <div id="header-bottom">
-          Profile icon
-
-          Hi there, user name (@username)
-          <ul>
-            <li>New</li>
-            <li>Upload</li>
-            <li>Share</li>
-          </ul>
+        <input id="search-bar" type="text" placeholder="Search Projects..">
+        <button id="create-new-project">+ Create New Project</button>
+        <div id="profile">
+          <p id="profile-name">Hello, Username</p>
+          <img id="profile-avatar" src="images/avatar.png">
+          <img id="profile-email" src="icons/email-alert.svg">
+          <img id="profile-notifications" src="icons/bell-badge.svg">
+          <img id="profile-hamburger" src="icons/menu.svg">
         </div>
       </div>
 
       <div id="projects">
-        Your projects
-
         <div class="project-card">
-          <p class="project-title">Super Cool Project</p>
+          <h2 class="project-title">Super Cool Project</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
         <div class="project-card">
-          <p class="project-title">Lesser Cool Project</p>
+          <h2 class="project-title">Not So Cool Project</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
         <div class="project-card">
-          <p class="project-title">Shit Project</p>
+          <h2 class="project-title">Project I Gave Up But Actually Like It</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
         <div class="project-card">
-          <p class="project-title">Easy Project</p>
+          <h2 class="project-title">Easy Project</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
         <div class="project-card">
-          <p class="project-title">Infinite Money Generator</p>
+          <h2 class="project-title">Fun Project</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
 
         <div class="project-card">
-          <p class="project-title">Jewish Tricks</p>
+          <h2 class="project-title">Almost Finished Project</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="project-card">
+          <h2 class="project-title">Discontinued Project</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
