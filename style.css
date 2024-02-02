@@ -17,16 +17,6 @@ div {
   border-radius: 6px;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  font-weight: bold;
-  font-size: 1.3rem;
-  filter: invert(93%) sepia(2%) saturate(4319%) hue-rotate(192deg) brightness(120%) contrast(40%);
-  padding-left: 12px;
-}
-
 h1 {
   color: white;
   text-align: center;
@@ -49,10 +39,11 @@ li {
 
 #toolbar {
   display: grid;
-  grid-template: 0.2fr 0.5fr 0.4fr 1fr / 1fr;
-  align-items: end;
-  gap: 30px;
+  grid-template-rows: 0.35fr repeat(8, 0.2fr) 1.2fr;
+  grid-template-columns: 1fr;
+  gap: 5px;
 
+  align-items: end;
   grid-column: 1 / 2;
   grid-row: 1 / 1;
   background-color:#191C24;
@@ -67,6 +58,57 @@ li {
   grid-row: 1 / 1;
   background-color:black;
 }
+
+/* the following settings are all about our toolbar (the several options in the left) */
+#toolbar h1 {
+  grid-row: 1 / 2;
+  letter-spacing: 4px;
+  margin-bottom: 25%;
+}
+
+.toolbar-option {
+  display: grid;
+  grid-template: 1fr / 0.3fr 1fr;
+  gap: 15px;
+
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-right: 5%;
+  height: 75px;
+  align-items: center;
+  justify-items: start;
+  background-color: #141313;
+}
+
+.toolbar-option:hover {
+  cursor: pointer;
+  background-color: #0e0e0e;
+}
+
+.toolbar-option img {
+  grid-column: 1 / 2;
+  filter: invert(93%) sepia(2%) saturate(4319%) hue-rotate(192deg) brightness(120%) contrast(60%);
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  padding: 10%;
+  margin-left: 15%;
+  margin-right: 5%;
+  border-radius: 30px;
+}
+
+.toolbar-option p {
+  grid-column: 2 / 3;
+  margin-top: 10%;
+  font-size: 1.3rem;
+}
+
+#credits {
+  grid-row: 10 / 11;
+  margin-left: 5%;
+  font-size: 1rem;
+}
+
 
 /* the following settings are all about our header (search bar, create project button, profile bio) */
 #header {
@@ -355,57 +397,20 @@ li {
   margin-right: 10px;
 }
 
+.finished-card img:hover, .finished-card-incomplete img:hover {
+  cursor: pointer;
+  background-color: rgb(168, 168, 168);
+}
+
+.finished-card:hover, .finished-card-incomplete:hover {
+  cursor: pointer;
+  background-color: #0e0e0e;
+}
+
 .finished-card {
   border-left: 5px solid rgb(18, 151, 47);
 }
 
 .finished-card-incomplete {
   border-left: 5px solid rgb(207, 26, 26);
-}
-
-/* our icons go here */
-
-#icon-home {
-  background: url('icons/home-account.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-account {
-  background: url('icons/account.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-messages {
-  background: url('icons/message.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-history {
-  background: url('icons/history.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-tasks {
-  background: url('icons/format-list-checks.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-communities {
-  background: url('icons/account-group.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-settings {
-  background: url('icons/cogs.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-support {
-  background: url('icons/face-agent.svg') no-repeat left top;
-  padding-left: 48px;
-}
-
-#icon-privacy {
-  background: url('icons/account-eye.svg') no-repeat left top;
-  padding-left: 48px;
 }
